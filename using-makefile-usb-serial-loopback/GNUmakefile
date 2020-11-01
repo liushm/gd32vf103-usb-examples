@@ -52,7 +52,7 @@ DEFS = -D HXTAL_VALUE=8000000 \
 ASFLAGS = -x assembler-with-cpp
 
 CFLAGS = -Wall -Os -march=rv32imac -mabi=ilp32 -mcmodel=medlow \
-		-fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -fno-common -std=gnu11
+         -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -fno-common -std=gnu11
 
 LDFLAGS = -march=rv32imac -mabi=ilp32 -mcmodel=medlow -nostartfiles -Xlinker --gc-sections --specs=nano.specs \
           -T Firmware/RISCV/env_Eclipse/GD32VF103xB.lds
