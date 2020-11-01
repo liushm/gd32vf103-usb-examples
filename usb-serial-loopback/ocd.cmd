@@ -1,0 +1,2 @@
+@set PATH=C:\Users\liushm\.platformio\packages\tool-openocd-gd32v\bin;%PATH%
+@openocd -s /share/openocd/scripts -f interface/jlink.cfg -f target/gd32vf103.cfg -c "adapter_khz 1000" -c "init; halt;" -c "flash protect 0 0 last off; program {firmware.elf} verify; mww 0xe004200c 0x4b5a6978; mww 0xe0042008 0x01; resume; exit 0;"
